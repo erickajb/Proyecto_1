@@ -1,0 +1,37 @@
+h1{
+    text-align: center;
+}
+form {
+    margin:0 auto;
+    width:40%;
+    background-color: #D4DFE8;
+}
+ 
+span input{
+    width:50%;
+    height:45%;
+    background: #33CCCC;
+    border:2px solid #0000FF;    
+    margin-top:1%;
+    font-size:1em;
+    color:#ffffff;
+    padding: -10%;
+    margin-left: 25%;
+
+}
+
+.submit {
+    width:85px;
+    height:35px;
+    border:2px solid #33CCCC; 
+    margin-top:20px;
+    cursor:pointer;
+    background-color: #0000FF;
+    margin-left: 42%;
+    font-size:1em;
+    color:#ffffff;
+}
+span h2{
+    font-size: 1.5em;
+    text-align: center;
+}
