@@ -2,7 +2,7 @@
     
 function Conectarse() //Función para conectarse a la BD
 {
-    global $argv;
+    global $argv;//Variable para obtener el nombre digitado por parametro
     $_SERVER["argv"];
     $parameterJson=$argv[1];
 
