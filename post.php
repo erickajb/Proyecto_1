@@ -1,4 +1,5 @@
 <?php
+
 $name = $_POST['name'];
 $lastname = $_POST['lastname'];
 $email = $_POST['email'];
@@ -17,6 +18,4 @@ if($fp){
 	fwrite($fp,$cvsData); // Write information to the file
 	fclose($fp); // Close the file
 }
-
-
 ?>
