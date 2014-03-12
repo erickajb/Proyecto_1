@@ -1,34 +1,90 @@
-h1{
-    text-align: center;
+body{
+    background: rgb(178,225,255); /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(178,225,255,1) 0%, rgba(102,182,252,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(178,225,255,1)), color-stop(100%,rgba(102,182,252,1))); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(178,225,255,1) 0%,rgba(102,182,252,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  rgba(178,225,255,1) 0%,rgba(102,182,252,1) 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  rgba(178,225,255,1) 0%,rgba(102,182,252,1) 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  rgba(178,225,255,1) 0%,rgba(102,182,252,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b2e1ff', endColorstr='#66b6fc',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    color: #032705;
+    font-family: "Comic Sans MS";
 }
-form {
+form{
     margin:0 auto;
     width:40%;
-    background-color: #D4DFE8;
-} 
-span input{
-    width:50%;
-    height:45%;
-    background: #33CCCC;
-    border:2px solid #0000FF;    
-    margin-top:1%;
-    font-size:1em;
-    color:#ffffff;
-    padding: -10%;
-    margin-left: 25%;
+    height:20%; 
+    background: rgb(69,72,77); /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(69,72,77,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(69,72,77,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    border: 0.1em solid #57ABB8;
+    border-radius: 0.25em;
+    color: #1E8E95;
 }
-.submit {
-    width:85px;
-    height:35px;
-    border:2px solid #33CCCC; 
-    margin-top:20px;
-    cursor:pointer;
-    background-color: #0000FF;
-    margin-left: 42%;
-    font-size:1em;
-    color:#ffffff;
+div img{
+    margin-left: 30%;
+    height: 40%;
+    width: 30%;    
+}
+h1 b{
+    text-align: center;
+    color: #2498B9;
+    margin-left: 34%;
+    text-shadow: 4px 4px 1px #000000;
+    font-size: 1.3em;
+}
+h2 b{
+    color: #E80000;
+    font-family: "Comic Sans MS";
+    font-size: 1.5em;
+    text-shadow: 4px 4px 1px #FEFAFA;
+
 }
 span h2{
     font-size: 1.5em;
     text-align: center;
 }
+span input{
+    width:50%;
+    height:45%;   
+    margin-top:1%;
+    font-size:1.1em;
+    color:#1C95AA;
+    padding: -10%;
+    margin-left: 25%;
+    font-family: "Comic Sans MS";
+    border: 0.1em solid #57ABB8;
+    border-radius: 0.25em;
+}
+.form2 {
+    margin:0 auto;
+    width:45%;
+    background-color: #81BEFC;
+    margin-top: 13%;
+}
+.submit {
+    width:85px;
+    height:35px;
+    border:4px solid #33CCCC; 
+    margin-top:20px;
+    cursor:pointer;
+    background: rgb(79,133,187); /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(79,133,187,1) 0%, rgba(79,133,187,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(79,133,187,1)), color-stop(100%,rgba(79,133,187,1))); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(79,133,187,1) 0%,rgba(79,133,187,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  rgba(79,133,187,1) 0%,rgba(79,133,187,1) 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  rgba(79,133,187,1) 0%,rgba(79,133,187,1) 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  rgba(79,133,187,1) 0%,rgba(79,133,187,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f85bb', endColorstr='#4f85bb',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    margin-left: 42%;
+    font-size:1.3em;
+    color:#ffffff;
+    font-family: "Comic Sans MS";
+}
+

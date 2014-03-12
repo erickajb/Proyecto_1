@@ -10,7 +10,7 @@ $dateSystem=date("dmY");	//Variable que guarda la fecha del sistema
 
 
 
-$cvsData = $name . ";" . $lastname . ";" . $email . ";". $phone . ";" . $id . ";" ."\n";	//aquí es donde creamos nuestro archivo csv
+$cvsData = $name . ";" . $lastname . ";" . $email . ";". $phone . ";" . $id . "\n";	//aquí es donde creamos nuestro archivo csv
 
 $fp = fopen($dateSystem.".csv","a");
 
@@ -19,3 +19,29 @@ if($fp){
 	fclose($fp); 	// Cerramos nuestro archivo
 }
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>   
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta http-equiv="Refresh" content="3;url=index.html">
+    <link rel="stylesheet" type="text/css" href="style/index.css">
+</head>
+<body>    
+    <div>
+        <header>
+            <div>
+                <form class="form2">
+                    <h2><b>Registration completed successfully</b></h2>
+                    <div><img src="img/check.png"></div>
+                    
+                </form>     
+                
+            </div>
+
+         </header>
+        <section>
+                    
+</body>
+</html> 
+
