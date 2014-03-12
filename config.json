@@ -1,6 +1,16 @@
 {
-    "ip":"localhost",
-    "user":"root",
-    "password":"",
-    "db":"estudiantes"
+"data":	
+{
+"ip":"localhost",
+"user":"root",
+"password":"",
+"db":"estudiantes"	
+},
+"mail":
+{
+"send":"erickajb88@gmail.com",
+"passMail":"2-691-563",
+"server":"smtp.gmail.com",
+"to":"erickajb88@gmail.com"
+}    
 }

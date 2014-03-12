@@ -1,28 +1,34 @@
 <?php
-    
-function Conectarse()    //Función para conectarse a la BD
-{
+
     global $argv;   //Variable para obtener el nombre digitado por parametro
     $_SERVER["argv"];
     $parameterJson=$argv[1];
 
     $json = file_get_contents($parameterJson . ".json");    //Guardamos los datos que obtuvimos de esta funcion en la variable  llamada json.
     $data = json_decode($json, true);   //esta funcion nos dara los datos de json en un formato que php pueda leer adecuadamente, y la guardaremos en otra variable llamada data.
-    $IP=$data["ip"];    //Variable que guarda lo ip del servidor
-    $USER=$data["user"];    //Variable que guarda el user
-    $PASSWORD=$data["password"];    //Variable que guarda el password
-    $DB=$data["db"];    //Variable que guarda el nombre de nuestra base de datos
+    $IP=$data["data"]["ip"];    //Variable que guarda lo ip del servidor
+    $USER=$data["data"]["user"];    //Variable que guarda el user
+    $PASSWORD=$data["data"]["password"];    //Variable que guarda el password
+    $DB=$data["data"]["db"];    //Variable que guarda el nombre de nuestra base de datos
+    
+    $mail = json_decode($json, true);
+    $send = $mail["mail"]["send"];
+    $passMail = $mail["mail"]["passMail"];
+    $server = $mail["mail"]["server"];
+    $to = $mail["mail"]["to"];
 
-   if (!($link = mysqli_connect($IP, $USER, $PASSWORD, $DB)))
+function Conectarse()    //Función para conectarse a la BD
+{
+    global $IP,$USER,$PASSWORD,$DB;
+    if (!($link = mysqli_connect($IP, $USER, $PASSWORD, $DB)))
     {
         echo "Error conectando a la base de datos.";
         exit();
     }
     return $link;
-
 }
 
-date_default_timezone_set("America/Costa_Rica");
+date_default_timezone_set("America/Costa_Rica"); //configuramos la zona horaria
 $dateSystem=date("dmY");
 $row = 0;
 $handle = fopen($dateSystem . ".csv", "r");  //nombre del archivo csv que contiene los datos
@@ -46,25 +52,27 @@ while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {   //Lee toda una linea
 }
 fclose($handle);
 
+//De aqui en adelante es código con la conexion con el servidor smtp de Gmail
+
 include("PHPMailer/class.phpmailer.php"); 
 include("PHPMailer/class.smtp.php"); 
 $mail = new PHPMailer(); 
 $mail->IsSMTP(); 
 $mail->SMTPAuth = true; 
 $mail->SMTPSecure = "ssl"; 
-$mail->Host = "smtp.gmail.com"; 
+$mail->Host = $server; 
 $mail->Port = 465; 
-$mail->Username = "erickajb88@gmail.com"; 
-$mail->Password = "2-691-563";
-$mail->From = "erickajb88@gmail.com"; 
+$mail->Username = "erickajb88@gmail.com";
+$mail->Password = $passMail;
+$mail->From = $send; 
 $mail->FromName = "Ericka Jimenez Barquero"; 
 $mail->Subject = "Confirmation"; 
 $mail->MsgHTML("<b>Records inserted in the database are: </b>" . $row); 
-$mail->AddAddress("erickajb88@gmail.com", "Ericka Jimenez Barquero"); 
+$mail->AddAddress($to, "Ericka Jimenez Barquero"); 
 $mail->IsHTML(true);
 
 if(!$mail->Send()) {  
-    echo "Error:". $Mail-> ErrorInfo;  
+    echo "Error:". $mail-> ErrorInfo;  
  } 
  else 
  {  

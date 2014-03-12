@@ -5,8 +5,7 @@ form {
     margin:0 auto;
     width:40%;
     background-color: #D4DFE8;
-}
- 
+} 
 span input{
     width:50%;
     height:45%;
@@ -17,9 +16,7 @@ span input{
     color:#ffffff;
     padding: -10%;
     margin-left: 25%;
-
 }
-
 .submit {
     width:85px;
     height:35px;
